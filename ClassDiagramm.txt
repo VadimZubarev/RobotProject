@@ -1,0 +1,50 @@
+@startuml
+Robot : int x
+Robot : int y
+class Camera
+{
+getPosition()
+}
+class BotControl
+{
+forward (unsigned int t)
+virtual void stop () = 0
+left (unsigned int t)
+right (unsigned int t)
+}
+class Valve
+{
+int x
+int y
+open (unsigned int t)
+virtual void close () = 0
+}
+class Student
+{
+sendCommand()
+}
+class Puff
+{
+int x
+int y
+string colour
+}
+class FooBoofControl
+{
+}
+class SystemControl
+{
+getCommand()
+sendCommand()
+}
+Student —o SystemControl
+Robot —o Camera
+Valve —o SystemControl
+Camera —o BotControl
+Robot —* BotControl
+Puff —o Camera
+FooBoofControl —o BotControl
+FooBoofControl —o Valve
+BotControl —o SystemControl
+Camera —o SystemControl
+@enduml
