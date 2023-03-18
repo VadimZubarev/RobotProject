@@ -1,0 +1,11 @@
+@startuml
+[*] --> Waiting
+Waiting --> Running : Exists Target
+Running --> Rotating : Angle > delta
+Rotating --> Running
+Running --> BringingBeer
+BringingBeer --> Running
+Running --> MovingForward : Distance > delta
+MovingForward --> Running
+
+@enduml
