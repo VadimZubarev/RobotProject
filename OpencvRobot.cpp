@@ -1,7 +1,7 @@
-#include"Detector.h"
+#include"Detector.cpp"
 
-int main()
+int main(int argc, char *argv[])
 {
-    Detector robot;
+    Detector detector;
     return 0;
 }
