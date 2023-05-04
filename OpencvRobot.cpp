@@ -1,4 +1,5 @@
-#include"Detector.cpp"
+#include"Detector.h"
+#include"Translator.h"
 
 int main(int argc, char *argv[])
 {
